@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <!-- fontawesome CDN-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Effect of Smoking</title>
+        <style>
+            header{
+                width: 100%;
+                height: 100vh;
+            }
+            img{
+                display: block;
+                margin: auto;
+                width: 100%;
+                height: auto;
+            }
+            .filter-lung1{
+                filter: invert(64%) sepia(11%) saturate(666%) hue-rotate(309deg) brightness(112%) contrast(84%); /* #d4aaab*/
+            }
+            .filter-lung2{
+                filter: invert(59%) sepia(3%) saturate(2727%) hue-rotate(308deg) brightness(102%) contrast(83%);  /* #B18E8F */
+            }
+            .filter-lung3{
+                filter: invert(45%) sepia(4%) saturate(2135%) hue-rotate(308deg) brightness(101%) contrast(83%);   /* #8D7172 */
+            }
+            .filter-lung4{
+                filter: invert(34%) sepia(7%) saturate(1044%) hue-rotate(308deg) brightness(97%) contrast(90%);    /* #6A5556 */
+            }
+            .filter-lung5{
+                filter: invert(23%) sepia(4%) saturate(1691%) hue-rotate(344deg) brightness(95%) contrast(91%);    /* #473939 */
+            }
+            .filter-lung6{
+                filter: invert(6%) sepia(6%) saturate(2400%) hue-rotate(302deg) brightness(89%) contrast(86%);    /* #231C1D */
+            }
+        </style>
+    </head>
+    <body>
+        <header class="container-fluid py-5 bg-warning">
+            <div class="container">
+                <h3 class="text-center text-muted" id="writing">Smoking damages your lungs...</h3>
+                <div class="row">
+                    <div class="col-lg-6 text-center mx-auto">
+                        <img class="" src="images/lungs-solid.svg" id="background">
+                    </div>
+                </div>
+            </div>
+        </header>
+     
+
+       <script>
+        var i = 0;
+        function change() {
+          var img = document.getElementById("background");
+          var color = ["filter-lung1", "filter-lung2", "filter-lung3", "filter-lung4", "filter-lung5", "filter-lung6"];
+          img.className = color[i];
+          i = (i + 1) % color.length;
+        }
+        setInterval(change, 1500);
+       
+       </script>
+    
+    </body>
+</html>
