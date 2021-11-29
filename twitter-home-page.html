@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <!-- FONTAWESOME CDN--> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Twitter. It's what's happening/Twitter</title>
+        <style>
+            header{
+                width: 100%;
+                height: 95vh;
+                overflow: hidden;
+            }
+            .first{
+                width: 100%;
+                height: 100vh;
+                background-image: url("images/twitter\(1\).png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: -70px center;
+                position: relative;
+                order: 1;
+            }
+            .first i{
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                position: absolute;
+                font-size: 312px;
+                color: #fff;
+            }
+            .second{
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                order: 2;
+            }
+            .second i{
+                color: rgb(29, 155, 240);
+                font-size: 48px;
+                margin-top: 70px;
+                margin-left: 30px;
+            }
+            .second h2{
+                font-size: 70px;
+                font-weight: 700;
+                margin-top: 60px;
+                margin-left: 30px;
+            }
+            .second h3{
+                font-size: 36px;
+                font-weight: 700;
+                margin-top: 50px;
+                margin-left: 30px;
+                margin-bottom: 40px;
+            }
+            .second button{
+                display: block;
+                margin-top: 8px;
+                margin-left: 30px;
+                width: 40%;
+                padding: 8px;
+                border-radius: 30px;
+                background-color: transparent;
+                color: #000;
+                border: 1px solid #dadce0;
+            }
+            .second button.one:hover{
+                background-color: #ecf3f9 !important;
+                border: 1px solid #ecf3f9;
+                color: #454545;
+            }
+            .second button.two:hover{
+                background-color: #e9e9e9 !important;
+                border: 1px solid #dadce0;
+                color: #454545;
+            }
+            .second span{
+                display: inline-block;
+                width: 19%;
+                height: 1px;
+                background-color: lightgrey;
+            }
+            .second span.firstspan{
+                margin-left: 30px;
+            }
+            .second button.three{
+                background-color: rgba(29, 155, 240, 0.9) !important;
+                border: 1px solid rgba(29, 155, 240, 0.9);
+                color: #fff;
+            }
+            .second button.three:hover{
+                background-color: rgba(29, 155, 240, 1) !important;
+                border: 1px solid rgba(29, 155, 240, 1);
+                color: #fff;
+            }
+            .second button.four{
+                color: rgb(29, 155, 240);
+            }
+            .second button.four:hover{
+                background-color: #ecf3f9 !important;
+                border: 1px solid #ecf3f9;
+                color: #fff;
+                color: rgb(29, 155, 240);
+            }
+            .second small{
+                margin-left: 30px;
+                display: block;
+                width: 45%;
+                font-size: 12px;
+            }
+            .second h4{
+                margin-left: 30px;
+                margin-top: 40px;
+            }
+            footer .row a{
+                display: block;
+                padding: 5px;
+                font-size: 15px;
+                color: #454545;
+            }
+            footer .row{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            @media screen and (max-width:1025px){
+                .second i{
+                    margin-top: 300px !important;
+                }
+            }
+            @media screen and (max-width:768px){
+                header{
+                    overflow-y: scroll;
+                    height: auto;
+                }
+                .first{
+                    order: 2;
+                    height: 40vh;
+                    background-position: center center;
+                }
+                .second{
+                    order: 1;
+                    height: 80vh;
+                }
+                .second i{
+                    margin-top: 70px !important;
+                    margin-left: 100px;
+                }
+                .second h2{
+                    width: 50%;
+                }
+                .second h2, .second h3, .second h4, .second button, .second small{
+                    margin-left: 100px;
+                }
+                .second span.firstspan{
+                    margin-left: 100px;
+                }
+                footer{
+                    height: auto;
+                    margin: 10px auto;
+                }
+            }
+            @media screen and (max-width:416px){
+                .second{
+                    height: auto;
+                }
+                .second i, .second h2, .second h3, .second h4, .second button, .second small{
+                    margin-left: 20px;
+                }
+                .second h2{
+                    margin-top: 30px;
+                    font-size: 36px;
+                    font-weight: 700;
+                    width: auto;
+                }
+                .second h3{
+                    margin-top: 30px;
+                    font-size: 28px;
+                }
+                .second button{
+                    width: 80%;
+                }
+                .second button.four{
+                    margin-bottom: 10px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-md-12 col-lg-4 col-xl-6 first">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="col-md-12 col-lg-8 col-xl-6 second">
+                        <i class="fab fa-twitter"></i>
+                        <h2>Happening now</h2>
+                        <h3>Join Twitter today.</h3>
+                        <button class="btn btn-primary one">
+                            <img src="https://img.icons8.com/color/24/000000/google-logo.png"/>Sign up with Google
+                        </button>
+                        <button class="btn btn-primary two">
+                            <img src="https://img.icons8.com/color/24/000000/mac-os--v1.png"/>Sign up with Apple
+                        </button>
+                        <span class="firstspan"></span>or<span></span>
+                        <button class="btn btn-primary three">
+                            Sign up with phone or email
+                        </button>
+                        <small>By signing up, you agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>,including <a href="#">Cookie Use</a></small>
+                        <h4>Already have an account?</h4>
+                        <button class="btn btn-primary four">
+                            <strong>Sign in</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <footer class="container-fluid">
+            <div class="row">
+                <a href="#">About</a>
+                <a href="#">Help Center</a>
+                <a href="#">Terms of Servise</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Imprint</a>
+                <a href="#">Ads Info</a>
+                <a href="#">Blog</a>
+                <a href="#">Status</a>
+                <a href="#">Careers</a>
+                <a href="#">Brand Resources</a>
+                <a href="#">Advertising</a>
+                <a href="#">Marketing</a>
+                <a href="#">Twitter for Business</a>
+                <a href="#">Developers</a>
+                <a href="#">Directory</a>
+                <a href="#">Settings</a>
+                <a href="">@2021 Twitter,ınc</a>
+            </div>
+        </footer>
+        
+        <!-- Option 2: jQuery, Popper.js, and Bootstrap JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    </body>
+</html>
