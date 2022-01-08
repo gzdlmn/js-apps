@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        @keyframes don {
+            from { transform: rotateY(0) rotateX(0) rotateZ(0);
+             }
+            to { transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+             }
+        }
+        #primary{
+            perspective: 600px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow:hidden;
+        }
+        #cube{
+            position: relative;
+            width: 120px;
+            height: 120px;
+            transform-style:preserve-3d;
+            margin:100px auto;
+            animation: don 5s infinite linear;
+        }
+        
+        #cube:hover{
+            animation-play-state:paused;
+        }
+        .surface{
+
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #right{
+            transform: rotateY(-270deg) translateX(60px);
+            transform-origin: top right;
+            opacity: .8;
+            background-color: red;
+            
+        }
+        
+        #left{
+            transform: rotateY(270deg) translateX(-60px);
+            transform-origin: center left;
+            opacity: .8;
+            background-color: red;
+         
+        }
+        
+        #front{
+            transform: translateZ(60px);
+            opacity: .8;
+            background-color: red;
+        }
+        
+        #back{
+            transform: translateZ(-60px) rotateY(180deg);
+            opacity: .8;
+            background-color: red;
+        }
+        
+        #top{
+            transform: rotateX(90deg) translateY(60px);
+            transform-origin: bottom center;
+            opacity: .8;
+            background-color: red;
+        }
+        
+        #bottom{
+            transform: rotateX(-90deg) translateY(-60px);
+            transform-origin: top center;
+            opacity: .8;
+            background-color: red;
+        }
+        i{
+            font-size: 96px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Just an image -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="images/bootstrap-solid.svg" width="30" height="30" alt="" loading="lazy">
+        </a>
+    </nav>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- this is cube -->
+                    <div id="primary">
+                        <div id="cube">
+                            <div id="left" class="surface"><i class="bi bi-dice-2"></i></div>
+                            <div id="right" class="surface"><i class="bi bi-dice-5"></i></div>
+                            <div id="top" class="surface"><i class="bi bi-dice-1"></i></div>
+                            <div id="bottom" class="surface"><i class="bi bi-dice-6"></i></div>
+                            <div id="front" class="surface"><i class="bi bi-dice-3"></i></div>
+                            <div id="back" class="surface"><i class="bi bi-dice-4"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
