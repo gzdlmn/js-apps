@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>getting started ReactJS</title>
+    <style>
+        body{
+            margin: 0 !important;
+            padding: 0 !important;
+            font-size: 32px;
+            color: #fff;
+        }
+        header{
+            height: 100vh;
+        }
+        .mx-auto{
+            border: 2px solid #42ba96;
+        }
+        #edit{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="container-fluid bg-dark">
+        <div class="container">
+            <h2 class="text-center text-success">to do list</h2>
+            <input type="text" class="form-control" id="what" onfocus="this.value=''">
+            <button type="button" class="btn btn-success d-block w-50 m-auto" onclick="createItem();">Add item to list</button>
+            <div class="row">
+                <div class="col-md-8 mx-auto mt-5">
+                    <form action="" id="create">
+                        <h4 class="text-center text-success p-3"><mark>Daily Form</mark></h4>
+                        <!--<div class="row">
+                            <div class="col-2">
+                                <input
+                            </div>
+                            <div class="col-8">    when button is clicked, to create like that!
+                                <p
+                            </div>
+                            <div class="col-2">
+                                <button <i class="bi bi-trash"
+                            </div>
+                        </div>-->
+                        <button type="button" class="btn btn-danger w-50 m-auto" onclick="sendForm();" id="edit">Edit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        "use strict";
+        // to create items in form
+        const createItem=()=>{
+            let whatIsDoing=document.getElementById("what").value;
+
+            const createRow=document.createElement("div");
+            document.getElementById("create").appendChild(createRow);
+            createRow.className="row"+" "+"createRow";        //created row
+
+            const createCol2=document.createElement("div");
+            createRow.appendChild(createCol2);
+            createCol2.className="col-2"+" "+"createCol2";    //created col-2
+
+            const createInput=document.createElement("input");
+            createCol2.appendChild(createInput);
+            createInput.type="checkbox";
+            createInput.className="form-control"+" "+"createInput";  //created input
+
+            const createCol8=document.createElement("div");
+            createRow.appendChild(createCol8);
+            createCol8.className="col-8"+" "+"createCol8";     //created col-8
+            
+            const createP=document.createElement("p");
+            createCol8.appendChild(createP);
+            createP.innerHTML=whatIsDoing;  
+            createP.className="text-success"+" "+"text-center"+" "+"createP"; //created p
+
+            const createCol22=document.createElement("div");
+            createRow.appendChild(createCol22);
+            createCol22.className="col-2"+" "+"createCol22";  //last col-2
+
+            const createButton=document.createElement("button");
+            createCol22.appendChild(createButton);
+            createButton.type="button";
+            createButton.className="d-block"+" "+"w-50"+" "+"m-auto"+" "+"createButton"; //created button
+            createButton.style.background="transparent";
+            createButton.style.border="none";
+            createButton.disabled=true;
+            
+           
+
+            const createI=document.createElement("i");
+            createButton.appendChild(createI);
+            createI.className="bi"+" "+"bi-trash"+" "+"createI";  //created i
+
+            document.getElementById("edit").style.display="block";
+        }
+        // the items which is checked. When trash buttons appears they can be delete.
+        const sendForm=()=>{
+            const countRow=document.getElementsByClassName("createRow");
+            const countInput=document.getElementsByClassName("createInput");
+            const countP=document.getElementsByClassName("createP");
+            const countButton=document.getElementsByClassName("createButton");
+            const countI=document.getElementsByClassName("createI");
+            for(let i=0; i<countRow.length; i++){
+                if(countInput[i].checked){
+                    countInput[i].disabled="true";
+                    countP[i].className="text-center"+" "+"text-danger"+" "+"createP";
+                    countButton[i].disabled=false;
+                    if(countButton[i].onclick=function(){
+                        countRow[i].style.display="none";
+                    }){
+
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
