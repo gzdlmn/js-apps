@@ -42,9 +42,9 @@
         </style>
     </head>
     <body>
-        <header class="container-fluid py-5 bg-light">
+        <header class="container-fluid py-5 bg-dark">
             <div class="container">
-                <h3 class="text-center text-muted" id="writing">Smoking damages your lungs...</h3>
+                <h3 class="text-center text-success" id="writing">Smoking damages your lungs...</h3>
                 <div class="row">
                     <div class="col-lg-6 text-center mx-auto">
                         <img class="" src="images/lungs-solid.svg" id="background">
@@ -55,14 +55,15 @@
      
 
        <script>
-        var i = 0;
-        function change() {
-          var img = document.getElementById("background");
-          var color = ["filter-lung1", "filter-lung2", "filter-lung3", "filter-lung4", "filter-lung5", "filter-lung6"];
-          img.className = color[i];
-          i = (i + 1) % color.length;
+        "use strict";
+        let i=0;
+        const change=()=>{
+            let img = document.getElementById("background");
+            let color = ["filter-lung1", "filter-lung2", "filter-lung3", "filter-lung4", "filter-lung5", "filter-lung6"];
+            img.className = color[i];
+            i = (i + 1) % color.length;
         }
-        setInterval(change, 1500);
+        setInterval(change, 1000);
        
        </script>
     
